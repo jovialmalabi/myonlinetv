@@ -102,7 +102,7 @@
             font-size: 1.3em;
             box-shadow: 0 50px 500px rgba(255, 255, 255, 0.425);
             cursor: pointer;
-            transition: background 0.2s;
+            transition: background 0.4s;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -178,8 +178,6 @@
             { name: 'NTV NEWS24 | Япония', url: 'https://n24-cdn-live.ntv.co.jp/ch01/index.m3u8' },
             { name: 'Habertürk TV | Турция', url: 'https://tv.ensonhaber.com/haberturk/haberturk.m3u8' },
             { name: 'Fox News Channel | США', url: 'http://247preview.foxnews.com/hls/live/2020027/fncv3preview/primary.m3u8' },
-            { name: 'Немецкая реклама Дисней', url: 'https://kaltura.akamaized.net/s/enc/hls/p/1068292/sp/106829200/serveFlavor/entryId/1_gokgr7k1/v/1/pv/1/ev/7/flavorId/1_fqgqwto2/name/a.mp4/index.m3u8?__hdnea__=st=1733271897~exp=1733293497~acl=/s/enc/hls/p/1068292/sp/106829200/serveFlavor/entryId/1_gokgr7k1/v/1/pv/1/ev/7/flavorId/1_*~hmac=ebfcc754022af097168e033549a753d5caa0a7ce210ae7db5a6bf5c9e85a1734' },
-            { name: 'Японская реклама Дисней', url: 'https://kaltura.akamaized.net/s/enc/hls/p/1068292/sp/106829200/serveFlavor/entryId/1_gsw8totv/v/1/pv/1/ev/6/flavorId/1_ujzg0l8k/name/a.mp4/index.m3u8?__hdnea__=st=1733272010~exp=1733293610~acl=/s/enc/hls/p/1068292/sp/106829200/serveFlavor/entryId/1_gsw8totv/v/1/pv/1/ev/6/flavorId/1_*~hmac=53530fad3113efbfca73e747bbcfbb1899769d77b5475d64226a7fc619489687' },
         ];
 
         // Функция для воспроизведения канала
@@ -199,7 +197,7 @@ async function getPing(url, pingElement) {
         const ping = Math.round(performance.now() - start) + ' ms';
         pingElement.textContent = ping;
     } catch (error) {
-        pingElement.textContent = 'Ошибка';
+        pingElement.textContent = 'Нет подключение';
     }
 }
 
